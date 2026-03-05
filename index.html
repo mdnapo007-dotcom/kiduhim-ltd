@@ -13,9 +13,9 @@
 
 body{
 margin:0;
-font-family:Inter;
-background:#020202;
+background:#050505;
 color:white;
+font-family:Inter;
 }
 
 header{
@@ -24,9 +24,10 @@ top:0;
 width:100%;
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px 40px;
 background:black;
-z-index:10;
+z-index:1000;
 }
 
 .logo{
@@ -37,19 +38,12 @@ font-size:22px;
 
 nav a{
 margin-left:20px;
-text-decoration:none;
 color:white;
+text-decoration:none;
+opacity:.8;
 }
 
-section{
-padding:120px 40px;
-max-width:1100px;
-margin:auto;
-}
-
-h1,h2{
-font-family:Orbitron;
-}
+nav a:hover{opacity:1}
 
 .hero{
 height:100vh;
@@ -59,9 +53,30 @@ justify-content:center;
 align-items:center;
 text-align:center;
 background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
 url("https://images.unsplash.com/photo-1473968512647-3e447244af8f");
 background-size:cover;
+}
+
+.hero h1{
+font-family:Orbitron;
+font-size:60px;
+}
+
+.hero p{
+max-width:600px;
+color:#ccc;
+}
+
+section{
+padding:110px 40px;
+max-width:1200px;
+margin:auto;
+}
+
+h2{
+font-family:Orbitron;
+margin-bottom:40px;
 }
 
 .grid{
@@ -71,14 +86,30 @@ gap:30px;
 }
 
 .card{
-background:#0b0b0b;
+background:#0d0d0d;
 padding:30px;
 border-radius:8px;
 border:1px solid #222;
+cursor:pointer;
 }
 
 .card:hover{
 border-color:#00ffa6;
+}
+
+.hidden{
+display:none;
+margin-top:10px;
+color:#ccc;
+}
+
+.map{
+text-align:center;
+}
+
+.map img{
+width:100%;
+opacity:.8;
 }
 
 .contact{
@@ -96,13 +127,28 @@ border-radius:6px;
 }
 
 footer{
-text-align:center;
 padding:40px;
-background:#050505;
+text-align:center;
+background:#020202;
 color:#777;
 }
 
 </style>
+
+<script>
+
+function toggleText(id){
+var x=document.getElementById(id);
+
+if(x.style.display==="block"){
+x.style.display="none";
+}else{
+x.style.display="block";
+}
+
+}
+
+</script>
 
 </head>
 
@@ -117,6 +163,7 @@ color:#777;
 <a href="#about">About</a>
 <a href="#capabilities">Capabilities</a>
 <a href="#operations">Operations</a>
+<a href="#team">Team</a>
 <a href="#recruitment">Recruitment</a>
 <a href="#contact">Contact</a>
 
@@ -129,7 +176,7 @@ color:#777;
 <h1>Strategic Security & Defense Solutions</h1>
 
 <p>
-Operational security, risk management and advanced technological solutions.
+Operational security, risk management and advanced technological solutions for complex environments.
 </p>
 
 </section>
@@ -142,7 +189,7 @@ Operational security, risk management and advanced technological solutions.
 
 KIDUHIM LTD provides security consulting, operational training and technological solutions for government and private sector partners.
 
-Our team includes professionals with military, engineering and security experience.
+The company works with experienced professionals in security operations, engineering and risk management.
 
 </p>
 
@@ -154,24 +201,44 @@ Our team includes professionals with military, engineering and security experien
 
 <div class="grid">
 
-<div class="card">
+<div class="card" onclick="toggleText('cap1')">
+
 <h3>Security Operations</h3>
-<p>Infrastructure protection and operational support.</p>
+
+<p id="cap1" class="hidden">
+Infrastructure protection, convoy security, operational support and risk environment operations.
+</p>
+
 </div>
 
-<div class="card">
+<div class="card" onclick="toggleText('cap2')">
+
 <h3>Tactical Training</h3>
-<p>Training programs for security personnel.</p>
+
+<p id="cap2" class="hidden">
+Training programs for security teams including defensive tactics and operational preparation.
+</p>
+
 </div>
 
-<div class="card">
+<div class="card" onclick="toggleText('cap3')">
+
 <h3>Risk Management</h3>
-<p>Threat assessment and operational planning.</p>
+
+<p id="cap3" class="hidden">
+Threat assessment, operational planning and crisis response strategy.
+</p>
+
 </div>
 
-<div class="card">
+<div class="card" onclick="toggleText('cap4')">
+
 <h3>Security Consulting</h3>
-<p>Strategic advisory for complex environments.</p>
+
+<p id="cap4" class="hidden">
+Strategic advisory for infrastructure protection and operational planning.
+</p>
+
 </div>
 
 </div>
@@ -188,6 +255,26 @@ Africa • Middle East • Europe
 
 </p>
 
+<div class="map">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg">
+
+</div>
+
+</section>
+
+<section id="team">
+
+<h2>Professional Team</h2>
+
+<p>
+
+Our personnel include professionals with backgrounds in military operations, security operations, engineering, UAV operations and technical systems.
+
+All personnel undergo professional selection and operational training.
+
+</p>
+
 </section>
 
 <section id="recruitment">
@@ -196,9 +283,19 @@ Africa • Middle East • Europe
 
 <p>
 
-We recruit experienced professionals including security specialists, engineers, UAV operators and technical experts.
+We recruit experienced professionals in the following areas:
 
 </p>
+
+<ul>
+
+<li>Security specialists</li>
+<li>UAV operators</li>
+<li>Engineers</li>
+<li>Logistics coordinators</li>
+<li>Technical specialists</li>
+
+</ul>
 
 </section>
 
@@ -209,6 +306,7 @@ We recruit experienced professionals including security specialists, engineers, 
 <div class="buttons">
 
 <a href="mailto:info@kiduhim.com">Email</a>
+
 <a href="https://wa.me/972000000000">WhatsApp</a>
 
 </div>
