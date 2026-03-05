@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KIDUHIM LTD</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+html{scroll-behavior:smooth;}
+
+body{
+margin:0;
+font-family:Inter;
+background:#040404;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAV */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(8px);
+z-index:10;
+}
+
+.logo{
+font-family:Orbitron;
+color:#00ff9c;
+font-size:22px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+opacity:.8;
+}
+
+nav a:hover{opacity:1;}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:radial-gradient(circle,#0b0b0b,#000);
+position:relative;
+}
+
+.hero h1{
+font-family:Orbitron;
+font-size:70px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#9a9a9a;
+max-width:650px;
+}
+
+.btn{
+margin-top:30px;
+padding:16px 40px;
+border-radius:6px;
+background:#00ff9c;
+color:black;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 0 20px #00ff9c;
+}
+
+/* RADAR */
+
+.radar{
+position:absolute;
+width:600px;
+height:600px;
+border-radius:50%;
+border:1px solid rgba(0,255,156,0.2);
+animation:spin 8s linear infinite;
+}
+
+@keyframes spin{
+from{transform:rotate(0deg)}
+to{transform:rotate(360deg)}
+}
+
+/* SECTIONS */
+
+section{
+padding:120px 30px;
+max-width:1200px;
+margin:auto;
+}
+
+h2{
+font-family:Orbitron;
+font-size:34px;
+margin-bottom:40px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:#0f0f0f;
+padding:35px;
+border-radius:10px;
+border:1px solid #1a1a1a;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#00ff9c;
+box-shadow:0 0 30px rgba(0,255,156,0.25);
+}
+
+/* MAP */
+
+.map{
+text-align:center;
+}
+
+.map img{
+max-width:100%;
+opacity:.7;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact-buttons{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.contact-buttons a{
+padding:14px 28px;
+background:#00ff9c;
+color:black;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+padding:40px;
+text-align:center;
+background:#0a0a0a;
+color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero h1{font-size:40px;}
+
+nav{display:none;}
+
+header{padding:15px 20px;}
+
+.radar{width:300px;height:300px;}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">KIDUHIM LTD</div>
+
+<nav>
+
+<a href="#services">Services</a>
+<a href="#equipment">Equipment</a>
+<a href="#operations">Operations</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="radar"></div>
+
+<h1>Strategic Defense Technologies</h1>
+
+<p>
+Advanced UAV systems, radar detection
+and operational security consulting.
+</p>
+
+<a class="btn" href="#contact">Request Cooperation</a>
+
+</section>
+
+<section id="services">
+
+<h2>Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>UAV Operations</h3>
+<p>Drone reconnaissance and tactical mission support.</p>
+</div>
+
+<div class="card">
+<h3>Tactical Training</h3>
+<p>Advanced operational training for security forces.</p>
+</div>
+
+<div class="card">
+<h3>Security Consulting</h3>
+<p>Strategic advisory for government and private sector.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="equipment">
+
+<h2>Technology & Equipment</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Radar Systems</h3>
+<p>Early warning radar and surveillance systems.</p>
+</div>
+
+<div class="card">
+<h3>Counter-UAV</h3>
+<p>Drone detection and neutralization technologies.</p>
+</div>
+
+<div class="card">
+<h3>Electronic Intelligence</h3>
+<p>Advanced signal detection capabilities.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="operations" class="map">
+
+<h2>Global Operations</h2>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg">
+
+<p>Operational deployments and international cooperation.</p>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Contact</h2>
+
+<div class="contact-buttons">
+
+<a href="mailto:info@kiduhim.com">Email</a>
+
+<a href="https://wa.me/972000000000">WhatsApp</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 KIDUHIM LTD
+
+</footer>
+
+</body>
+
+</html>
