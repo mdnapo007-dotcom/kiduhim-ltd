@@ -24,10 +24,9 @@ top:0;
 width:100%;
 display:flex;
 justify-content:space-between;
-align-items:center;
 padding:20px 40px;
 background:black;
-z-index:1000;
+z-index:10;
 }
 
 .logo{
@@ -38,8 +37,8 @@ font-size:22px;
 
 nav a{
 margin-left:20px;
-color:white;
 text-decoration:none;
+color:white;
 opacity:.8;
 }
 
@@ -53,19 +52,14 @@ justify-content:center;
 align-items:center;
 text-align:center;
 background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
-url("https://images.unsplash.com/photo-1473968512647-3e447244af8f");
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9)),
+url("https://images.unsplash.com/photo-1508614589041-895b88991e3e");
 background-size:cover;
 }
 
 .hero h1{
 font-family:Orbitron;
 font-size:60px;
-}
-
-.hero p{
-max-width:600px;
-color:#ccc;
 }
 
 section{
@@ -90,34 +84,29 @@ background:#0d0d0d;
 padding:30px;
 border-radius:8px;
 border:1px solid #222;
-cursor:pointer;
 }
 
 .card:hover{
 border-color:#00ffa6;
 }
 
-.hidden{
-display:none;
-margin-top:10px;
-color:#ccc;
-}
-
-.map{
-text-align:center;
-}
-
 .map img{
 width:100%;
-opacity:.8;
+opacity:.85;
 }
 
-.contact{
-text-align:center;
+.team img{
+width:100%;
+border-radius:6px;
+margin-bottom:10px;
+}
+
+.jobs li{
+margin-bottom:8px;
 }
 
 .buttons a{
-padding:14px 28px;
+padding:14px 26px;
 background:#00ffa6;
 color:black;
 text-decoration:none;
@@ -134,22 +123,6 @@ color:#777;
 }
 
 </style>
-
-<script>
-
-function toggleText(id){
-var x=document.getElementById(id);
-
-if(x.style.display==="block"){
-x.style.display="none";
-}else{
-x.style.display="block";
-}
-
-}
-
-</script>
-
 </head>
 
 <body>
@@ -176,7 +149,7 @@ x.style.display="block";
 <h1>Strategic Security & Defense Solutions</h1>
 
 <p>
-Operational security, risk management and advanced technological solutions for complex environments.
+Operational security, risk management and advanced technological solutions for complex environments worldwide.
 </p>
 
 </section>
@@ -189,7 +162,7 @@ Operational security, risk management and advanced technological solutions for c
 
 KIDUHIM LTD provides security consulting, operational training and technological solutions for government and private sector partners.
 
-The company works with experienced professionals in security operations, engineering and risk management.
+Our personnel include professionals with experience in security operations, engineering, UAV systems and risk management.
 
 </p>
 
@@ -201,44 +174,24 @@ The company works with experienced professionals in security operations, enginee
 
 <div class="grid">
 
-<div class="card" onclick="toggleText('cap1')">
-
+<div class="card">
 <h3>Security Operations</h3>
-
-<p id="cap1" class="hidden">
-Infrastructure protection, convoy security, operational support and risk environment operations.
-</p>
-
+<p>Protection of infrastructure, logistics and personnel.</p>
 </div>
 
-<div class="card" onclick="toggleText('cap2')">
-
+<div class="card">
 <h3>Tactical Training</h3>
-
-<p id="cap2" class="hidden">
-Training programs for security teams including defensive tactics and operational preparation.
-</p>
-
+<p>Operational training for security teams and specialists.</p>
 </div>
 
-<div class="card" onclick="toggleText('cap3')">
-
+<div class="card">
 <h3>Risk Management</h3>
-
-<p id="cap3" class="hidden">
-Threat assessment, operational planning and crisis response strategy.
-</p>
-
+<p>Threat assessment and crisis management planning.</p>
 </div>
 
-<div class="card" onclick="toggleText('cap4')">
-
+<div class="card">
 <h3>Security Consulting</h3>
-
-<p id="cap4" class="hidden">
-Strategic advisory for infrastructure protection and operational planning.
-</p>
-
+<p>Strategic advisory for security architecture.</p>
 </div>
 
 </div>
@@ -249,17 +202,17 @@ Strategic advisory for infrastructure protection and operational planning.
 
 <h2>Operational Regions</h2>
 
-<p>
-
-Africa • Middle East • Europe
-
-</p>
-
 <div class="map">
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg">
 
 </div>
+
+<p style="text-align:center">
+
+Africa • Middle East • Europe
+
+</p>
 
 </section>
 
@@ -267,13 +220,39 @@ Africa • Middle East • Europe
 
 <h2>Professional Team</h2>
 
-<p>
+<div class="grid team">
 
-Our personnel include professionals with backgrounds in military operations, security operations, engineering, UAV operations and technical systems.
+<div class="card">
 
-All personnel undergo professional selection and operational training.
+<img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c">
 
-</p>
+<h3>Security Specialists</h3>
+
+<p>Experienced professionals with operational background.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
+
+<h3>Technical Engineers</h3>
+
+<p>Engineering and technical specialists.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
+
+<h3>UAV Operators</h3>
+
+<p>Professional drone operators and technicians.</p>
+
+</div>
+
+</div>
 
 </section>
 
@@ -281,29 +260,25 @@ All personnel undergo professional selection and operational training.
 
 <h2>Recruitment</h2>
 
-<p>
+<p>We recruit experienced professionals in the following areas:</p>
 
-We recruit experienced professionals in the following areas:
-
-</p>
-
-<ul>
+<ul class="jobs">
 
 <li>Security specialists</li>
 <li>UAV operators</li>
 <li>Engineers</li>
-<li>Logistics coordinators</li>
 <li>Technical specialists</li>
+<li>Logistics coordinators</li>
 
 </ul>
 
 </section>
 
-<section id="contact" class="contact">
+<section id="contact">
 
-<h2>Contact</h2>
+<h2 style="text-align:center">Contact</h2>
 
-<div class="buttons">
+<div class="buttons" style="text-align:center">
 
 <a href="mailto:info@kiduhim.com">Email</a>
 
