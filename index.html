@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>KIDUHIM LTD</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-background:#040404;
+font-family:Arial;
+background:#050505;
 color:white;
-font-family:Inter;
 }
 
 header{
 position:fixed;
 top:0;
 width:100%;
+background:black;
+padding:18px 40px;
 display:flex;
 justify-content:space-between;
-padding:20px 40px;
-background:black;
-z-index:10;
+z-index:1000;
 }
 
 .logo{
-font-family:Orbitron;
+font-weight:bold;
 color:#00ffa6;
-font-size:22px;
 }
 
 nav a{
 margin-left:20px;
-text-decoration:none;
 color:white;
-opacity:.8;
+text-decoration:none;
 }
 
-nav a:hover{opacity:1}
+nav a:hover{
+color:#00ffa6;
+}
+
+section{
+padding:100px 40px;
+max-width:1100px;
+margin:auto;
+}
 
 .hero{
 height:100vh;
@@ -53,60 +58,30 @@ align-items:center;
 text-align:center;
 background:
 linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
-url("https://images.unsplash.com/photo-1473968512647-3e447244af8f");
+url("https://images.unsplash.com/photo-1520975922284-9f1b8c15b38c");
 background-size:cover;
 }
 
-.hero h1{
-font-family:Orbitron;
-font-size:60px;
-}
-
-section{
-padding:110px 40px;
-max-width:1200px;
-margin:auto;
-}
-
-h2{
-font-family:Orbitron;
-margin-bottom:40px;
+h1,h2{
+color:#00ffa6;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
-background:#0c0c0c;
-padding:30px;
-border-radius:8px;
+background:#0d0d0d;
+padding:25px;
+border-radius:6px;
 border:1px solid #222;
 }
 
-.card:hover{
-border-color:#00ffa6;
-}
-
-.contact{
-text-align:center;
-}
-
-.buttons a{
-padding:14px 28px;
-background:#00ffa6;
-color:black;
-text-decoration:none;
-margin:10px;
-display:inline-block;
-border-radius:6px;
-}
-
 footer{
-padding:40px;
 text-align:center;
+padding:40px;
 background:#020202;
 color:#777;
 }
@@ -123,11 +98,13 @@ color:#777;
 
 <nav>
 
+<a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#training">Training</a>
-<a href="#operations">Operations</a>
 <a href="#technology">Technology</a>
+<a href="#operations">Operations</a>
+<a href="#team">Team</a>
 <a href="#careers">Careers</a>
 <a href="#contact">Contact</a>
 
@@ -135,24 +112,29 @@ color:#777;
 
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
 
 <h1>Strategic Security & Risk Management</h1>
 
 <p>
-Operational security, risk management and advanced technological solutions worldwide.
+Professional security consulting, risk management, training and technology solutions
+for organizations operating in complex environments worldwide.
 </p>
 
 </section>
 
 <section id="about">
 
-<h2>About</h2>
+<h2>About the Company</h2>
 
 <p>
+KIDUHIM LTD provides professional services in the fields of security consulting,
+risk analysis and operational support.
+</p>
 
-KIDUHIM LTD provides security consulting, operational training and technological solutions for government and private sector partners operating in complex environments.
-
+<p>
+Our specialists include experienced professionals from security,
+technical and operational backgrounds working with international partners.
 </p>
 
 </section>
@@ -164,23 +146,43 @@ KIDUHIM LTD provides security consulting, operational training and technological
 <div class="grid">
 
 <div class="card">
-<h3>Security Operations</h3>
-<p>Protection of personnel, logistics and infrastructure.</p>
-</div>
 
-<div class="card">
 <h3>Protective Services</h3>
-<p>Professional security support in complex environments.</p>
+
+<p>
+Security support for personnel, facilities and infrastructure.
+</p>
+
 </div>
 
 <div class="card">
-<h3>Risk Management</h3>
-<p>Threat assessment and crisis management planning.</p>
-</div>
 
-<div class="card">
 <h3>Security Consulting</h3>
-<p>Strategic advisory for operational security.</p>
+
+<p>
+Strategic advisory for organizations operating in challenging environments.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Risk Management</h3>
+
+<p>
+Threat assessment and crisis planning.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Infrastructure Security</h3>
+
+<p>
+Protection strategies for critical infrastructure and logistics.
+</p>
+
 </div>
 
 </div>
@@ -189,29 +191,23 @@ KIDUHIM LTD provides security consulting, operational training and technological
 
 <section id="training">
 
-<h2>Training</h2>
+<h2>Training Programs</h2>
 
-<div class="grid">
+<p>
 
-<div class="card">
-<h3>Tactical Training</h3>
-<p>Professional training for security teams.</p>
-</div>
+We provide professional preparation programs for specialists working
+in security and technical environments.
 
-<div class="card">
-<h3>Operational Planning</h3>
-<p>Mission preparation and risk mitigation.</p>
-</div>
+</p>
 
-</div>
+<ul>
 
-</section>
+<li>situational awareness training</li>
+<li>security team preparation</li>
+<li>crisis response planning</li>
+<li>technical systems training</li>
 
-<section id="operations">
-
-<h2>Operations</h2>
-
-<p>Africa • Middle East • Europe</p>
+</ul>
 
 </section>
 
@@ -222,16 +218,78 @@ KIDUHIM LTD provides security consulting, operational training and technological
 <div class="grid">
 
 <div class="card">
-<h3>UAV Systems</h3>
-<p>Advanced drone operations and monitoring.</p>
+
+<h3>Monitoring Systems</h3>
+
+<p>
+Advanced surveillance technologies.
+</p>
+
 </div>
 
 <div class="card">
-<h3>Detection Systems</h3>
-<p>Early warning and surveillance technologies.</p>
+
+<h3>UAV Systems</h3>
+
+<p>
+Drone-based monitoring and data collection systems.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Detection Technologies</h3>
+
+<p>
+Security detection and early warning systems.
+</p>
+
 </div>
 
 </div>
+
+</section>
+
+<section id="operations">
+
+<h2>Global Operations</h2>
+
+<p>
+
+Our company cooperates with partners and organizations
+across several regions.
+
+</p>
+
+<ul>
+
+<li>Africa</li>
+<li>Middle East</li>
+<li>Europe</li>
+
+</ul>
+
+</section>
+
+<section id="team">
+
+<h2>Professional Team</h2>
+
+<p>
+
+Our team includes:
+
+</p>
+
+<ul>
+
+<li>security specialists</li>
+<li>engineers</li>
+<li>technical operators</li>
+<li>risk analysts</li>
+
+</ul>
 
 </section>
 
@@ -241,22 +299,28 @@ KIDUHIM LTD provides security consulting, operational training and technological
 
 <p>
 
-We recruit experienced professionals in security operations, engineering, UAV operations and logistics.
+We recruit experienced professionals in the following fields:
 
 </p>
 
+<ul>
+
+<li>security specialists</li>
+<li>technical operators</li>
+<li>engineers</li>
+<li>logistics coordinators</li>
+
+</ul>
+
 </section>
 
-<section id="contact" class="contact">
+<section id="contact">
 
 <h2>Contact</h2>
 
-<div class="buttons">
+<p>Email: info@kiduhim.com</p>
 
-<a href="mailto:info@kiduhim.com">Email</a>
-<a href="https://wa.me/972000000000">WhatsApp</a>
-
-</div>
+<p>For partnership or cooperation inquiries please contact us.</p>
 
 </section>
 
